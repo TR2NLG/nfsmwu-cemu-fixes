@@ -1,0 +1,6 @@
+[Definition]
+titleIds = 0005000010128800,0005000010128400,000500001012b700,0005000e10128400,0005000e10128800,0005000e1012b700
+name = Shader Cache Crash Fix
+path = "Need for Speed Most Wanted U/Workaround/Shader Cache Crash Fix"
+description = Prevents the crash on start ("Compiling shaders") that appears from one day to the next in Cemu 2.6. The game reuses the memory of its fetch shaders, so Cemu can pick up a fetch shader whose contents no longer fit its declared size, stores it cut off in the shader cache and crashes when it loads that entry. This pack passes Cemu an unchanging copy of every fetch shader with the correct size.|It does not repair a cache that already contains the damaged entry, use the Shader Cache Repair script once for that.|Only for the EU version with update v32 (module checksum 0xfc370b5b). On other versions the pack does nothing. Changes take effect after restarting the game.|Made by TR2N.
+version = 6

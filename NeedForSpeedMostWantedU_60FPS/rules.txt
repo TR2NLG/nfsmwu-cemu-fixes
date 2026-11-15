@@ -1,0 +1,73 @@
+[Definition]
+titleIds = 0005000010128800,0005000010128400,000500001012b700,0005000e10128400,0005000e10128800,0005000e1012b700
+name = 60 FPS
+path = "Need for Speed Most Wanted U/Mods/60 FPS"
+description = Runs the game at 60 frames per second instead of 30. The Mode option selects what happens when the system cannot hold 60 FPS.|Frame pacing: every frame lasts exactly 1/60, 1/40, 1/30 or 1/24 s and is simulated with a step of the same length. The tier follows the measured work time per frame. Use the modes with 40 and 24 FPS on 120 Hz and variable refresh rate displays, 60/30 on 60 Hz displays.|Variable step (smoothed): no fixed frame times, the step follows the average frame time in small increments. The camera reacts to the changing step, most visibly while accelerating.|Variable step (direct): the step is doubled after a late frame. Strong pumping.|Frame skip: the engine runs two steps in a frame that follows a late one. Only for very fast CPUs.|Fixed time step: the game runs in slow motion below 60 FPS.|Cutscenes paced: cutscenes and the crash camera are treated like driving (one simulation step per frame). Cutscenes original: the game runs up to three steps per frame there, which is slower at 60 FPS stepping. Has no effect in the frame skip and fixed time step modes.|Only for the EU version with update v32 (module checksum 0xfc370b5b). On other versions the pack does nothing. Below 30 FPS the game slows down in every mode. Experimental, changes take effect after restarting the game.|Made by TR2N.
+version = 6
+
+[Default]
+$maxSteps = 1
+$adaptive = 3
+$paceTiers = 3
+$cutscenes = 1
+
+[Preset]
+name = Frame pacing 60/40/30
+category = Mode
+default = 1
+$maxSteps = 1
+$adaptive = 3
+$paceTiers = 3
+
+[Preset]
+name = Frame pacing 60/40/30/24
+category = Mode
+$maxSteps = 1
+$adaptive = 3
+$paceTiers = 4
+
+[Preset]
+name = Frame pacing 60/30
+category = Mode
+$maxSteps = 1
+$adaptive = 3
+$paceTiers = 2
+
+[Preset]
+name = Variable step (smoothed)
+category = Mode
+$maxSteps = 1
+$adaptive = 2
+$paceTiers = 3
+
+[Preset]
+name = Variable step (direct)
+category = Mode
+$maxSteps = 1
+$adaptive = 1
+$paceTiers = 3
+
+[Preset]
+name = Frame skip
+category = Mode
+$maxSteps = 2
+$adaptive = 0
+$paceTiers = 3
+
+[Preset]
+name = Fixed time step
+category = Mode
+$maxSteps = 1
+$adaptive = 0
+$paceTiers = 3
+
+[Preset]
+name = Cutscenes paced
+category = Cutscenes
+default = 1
+$cutscenes = 1
+
+[Preset]
+name = Cutscenes original
+category = Cutscenes
+$cutscenes = 0
